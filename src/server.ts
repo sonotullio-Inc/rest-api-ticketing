@@ -23,7 +23,7 @@ class Server {
     private config() {
         // setup mongoose
         const MONGO_URI_LOCALE: string = 'mongodb://localhost/express-boilerplate'
-        const MONGO_URI_HEROKU: string = 'mongodb://heroku_2tqjfjwr@ds243059.mlab.com:43059/heroku_2tqjfjwr'
+        const MONGO_URI_HEROKU: string = 'mongo ds243059.mlab.com:43059/heroku_2tqjfjwr -u sono.tullio -p 5285byte'
         mongoose.connect(MONGO_URI_HEROKU || process.env.MONGO_URI);
 
         // config
