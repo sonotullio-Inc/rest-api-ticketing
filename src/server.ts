@@ -22,8 +22,9 @@ class Server {
 
     private config() {
         // setup mongoose
-        const MONGO_URI: string = 'mongodb://localhost/express-boilerplate'
-        mongoose.connect(MONGO_URI || process.env.MONGO_URI);
+        const MONGO_URI_LOCALE: string = 'mongodb://localhost/express-boilerplate'
+        const MONGO_URI_HEROKU: string = 'mongodb://heroku_2tqjfjwr@ds243059.mlab.com:43059/heroku_2tqjfjwr'
+        mongoose.connect(MONGO_URI_HEROKU || process.env.MONGO_URI);
 
         // config
         this.app.use(bodyParser.json()); //parsa i body di req e res in json.

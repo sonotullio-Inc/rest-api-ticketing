@@ -19,8 +19,9 @@ var Server = /** @class */ (function () {
     }
     Server.prototype.config = function () {
         // setup mongoose
-        var MONGO_URI = 'mongodb://localhost/express-boilerplate';
-        mongoose.connect(MONGO_URI || process.env.MONGO_URI);
+        var MONGO_URI_LOCALE = 'mongodb://localhost/express-boilerplate';
+        var MONGO_URI_HEROKU = 'mongodb://heroku_2tqjfjwr@ds243059.mlab.com:43059/heroku_2tqjfjwr';
+        mongoose.connect(MONGO_URI_HEROKU || process.env.MONGO_URI);
         // config
         this.app.use(bodyParser.json()); //parsa i body di req e res in json.
         this.app.use(bodyParser.urlencoded({ extended: false })); // ???
