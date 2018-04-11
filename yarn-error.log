@@ -1,0 +1,66 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.5.1_1/libexec/bin/yarn.js server
+
+PATH: 
+  /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "rest-api-ticketing",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "ts": "tsc -w",
+      "server": "nodemon ./build/index.js",
+      "start": "tsc && node ./build/index.js"
+    },
+    "author": "tullio",
+    "license": "ISC",
+    "dependencies": {
+      "body-parser": "^1.18.2",
+      "compression": "^1.7.2",
+      "cors": "^2.8.4",
+      "express": "^4.16.3",
+      "helmet": "^3.12.0",
+      "mongoose": "^5.0.14",
+      "morgan": "^1.9.0"
+    },
+    "devDependencies": {
+      "@types/express": "^4.11.1",
+      "@types/mongoose": "^5.0.9",
+      "@types/node": "^9.6.4",
+      "typescript": "2.8.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 127
+  Command: sh
+  Arguments: -c nodemon ./build/index.js
+  Directory: /Users/sonotullio/Documents/corsi/rest-api-ticketing
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/Cellar/yarn/1.5.1_1/libexec/lib/cli.js:30281:17)
+      at emitTwo (events.js:126:13)
+      at ChildProcess.emit (events.js:214:7)
+      at maybeClose (internal/child_process.js:925:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
