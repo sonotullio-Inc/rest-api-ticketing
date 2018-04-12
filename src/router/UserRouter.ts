@@ -52,12 +52,14 @@ class UserRouter {
         const username: string = req.body.username;
         const email: string = req.body.email;
         const password: string = req.body.password;
+        const role: string = req.body.role;
 
         const user = new User({
             name,
             username,
             email,
-            password
+            password,
+            role
         });
 
         user.save()

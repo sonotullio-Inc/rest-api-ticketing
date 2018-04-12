@@ -47,11 +47,13 @@ var UserRouter = /** @class */ (function () {
         var username = req.body.username;
         var email = req.body.email;
         var password = req.body.password;
+        var role = req.body.role;
         var user = new User_1.default({
             name: name,
             username: username,
             email: email,
-            password: password
+            password: password,
+            role: role
         });
         user.save()
             .then(function (data) {
