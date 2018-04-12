@@ -1,36 +1,35 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var mongoose_1 = require("mongoose");
-var UserSchema = new mongoose_1.Schema({
+var TicketSchema = new mongoose_1.Schema({
     createdAt: Date,
     updatedAt: Date,
-    name: {
+    title: {
         type: String,
         default: '',
         required: true,
     },
-    username: {
+    number: {
         type: String,
         default: '',
         required: true,
         unique: true,
         lowercase: true
     },
-    email: {
-        type: String,
-        default: '',
-        required: true,
-        unique: true
-    },
-    password: {
+    description: {
         type: String,
         default: '',
         required: true
     },
-    role: {
+    priority: {
+        type: String,
+        default: '',
+        required: true
+    },
+    state: {
         type: String,
         default: '',
         required: true
     }
 });
-exports.default = mongoose_1.model('User', UserSchema);
+exports.default = mongoose_1.model('Post', TicketSchema);

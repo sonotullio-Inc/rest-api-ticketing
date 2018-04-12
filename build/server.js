@@ -8,8 +8,8 @@ var logger = require("morgan");
 var helmet = require("helmet");
 var cors = require("cors");
 // import routers
-var PostRouter_1 = require("./router/PostRouter");
-var PostRouter_2 = require("./router/PostRouter");
+var TicketRouter_1 = require("./router/TicketRouter");
+var UserRouter_1 = require("./router/UserRouter");
 // Server class
 var Server = /** @class */ (function () {
     function Server() {
@@ -34,8 +34,8 @@ var Server = /** @class */ (function () {
         var router;
         router = express.Router();
         this.app.use('/', router);
-        this.app.use('/api/posts', PostRouter_1.default);
-        this.app.use('/api/users', PostRouter_2.default);
+        this.app.use('/api/tickets', TicketRouter_1.default);
+        this.app.use('/api/users', UserRouter_1.default);
     };
     return Server;
 }());
