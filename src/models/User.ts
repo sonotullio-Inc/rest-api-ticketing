@@ -26,6 +26,11 @@ let UserSchema: Schema = new Schema({
         type: String,
         default: '',
         required: true
+    },
+    role: {
+        type: String,
+        default: '',
+        required: true 
     }
 });
 

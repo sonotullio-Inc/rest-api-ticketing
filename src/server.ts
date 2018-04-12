@@ -7,8 +7,8 @@ import * as helmet from 'helmet';
 import * as cors from 'cors';
 
 // import routers
-import PostRouter from './router/PostRouter';
-import UserRouter from './router/PostRouter';
+import TicketRouter from './router/TicketRouter';
+import UserRouter from './router/UserRouter';
 
 // Server class
 class Server {
@@ -40,7 +40,7 @@ class Server {
         router = express.Router();
 
         this.app.use('/', router);
-        this.app.use('/api/posts', PostRouter);
+        this.app.use('/api/tickets', TicketRouter);
         this.app.use('/api/users', UserRouter);
     }
 

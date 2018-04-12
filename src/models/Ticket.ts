@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-let PostSchema: Schema = new Schema({
+let TicketSchema: Schema = new Schema({
 
     createdAt: Date,
     updatedAt: Date,
@@ -9,22 +9,28 @@ let PostSchema: Schema = new Schema({
         default: '',
         required: true,
     },
-    slug: {
+    number: {
         type: String,
         default: '',
         required: true,
         unique: true,
         lowercase: true
     },
-    content: {
+    description: {
         type: String,
         default: '',
         required: true
     },
-    featuredImages: {
+    priority: {
         type: String,
-        default: ''
+        default: '',
+        required: true
+    },
+    state: {
+        type: String,
+        default: '',
+        required: true
     }
 });
 
-export default model('Post', PostSchema);
+export default model('Post', TicketSchema);
