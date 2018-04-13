@@ -1,0 +1,65 @@
+<form #ticketForm="ngForm" novalidate (ngSubmit)="addTicket(ticketForm)">
+  <div class="container-fluid">
+      <div class="row justify-content-center">
+          <div class="col-sm-2"></div>
+          <div class="col-sm-8">
+              <div class="alert alert-primary" role="alert">
+                  Inserisci nuovo ticket!
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text" for="stato">Stato del ticket:</label>
+                  </div>
+                  <select [(ngModel)]="ticket.stato" class="custom-select" id="stato" name="stato" #stato="ngModel" required>
+                      <option selected="da lavorare">Da lavorare</option>
+                      <option value="in carico">Preso in carico</option>
+                      <option value="da testare">Da Testare</option>
+                      <option value="risolto">Risolto</option>
+                  </select>
+              </div>
+              <div *ngIf="stato.invalid && (stato.dirty || stato.touched)" class="alert alert-danger">
+                  Inserire uno stato valido.
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text" id="dataInizio">Data Inizio gestione:</span>
+                  </div>
+                  <input [(ngModel)]="ticket.dataInizio" name="dataInizio" type="datetime" class="form-control" #dataInizio="ngModel" required>
+                  <div *ngIf="dataInizio.invalid && (dataInizio.dirty || dataInizio.touched)" class="alert alert-danger">
+                      <div *ngIf="dataInizio.errors?.required">
+                          Inserire una data.
+                      </div>
+                  </div>
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text">Descrizione:</span>
+                  </div>
+                  <input [(ngModel)]="ticket.descrizione" #descrizione="ngModel" type="text-area" id="descrizione" name="descrizione" minlength="10" required>
+              </div>
+              <div *ngIf="descrizione.invalid && (descrizione.dirty || descrizione.touched)" class="alert alert-danger">
+                  <div *ngIf="descrizione.errors?.required">
+                      Inserire una descrizione.
+                  </div>
+                  <div>La descrizione deve essere di almeno 10 cartteri.</div>
+              </div>
+              <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                      <label class="input-group-text" for="stato">Priorita del ticket:</label>
+                  </div>
+                  <select [(ngModel)]="ticket.priorita" #priorita="ngModel" class="custom-select" id="priorita" name="priorita" required>
+                      <option value="alta">Alta</option>
+                      <option value="media">Media</option>
+                      <option value="bassa">Bassa</option>
+                  </select>
+              </div>
+              <div *ngIf="priorita.invalid && (priorita.dirty || priorita.touched)" class="alert alert-danger">
+                  Inserire la priorita del ticket.
+              </div>
+              <button type="submit" class="btn btn-success" [disabled]="!ticketForm.form.valid">Conferma</button>
+          </div>
+          <div class="col-sm-2"></div>
+      </div>
+  </div>
+</form>
+{{ticket | json}}

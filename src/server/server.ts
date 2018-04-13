@@ -5,10 +5,11 @@ import * as compression from 'compression';
 import * as logger from 'morgan';
 import * as helmet from 'helmet';
 import * as cors from 'cors';
+import * as path from 'path';
 
 // import routers
-import TicketRouter from './router/TicketRouter';
-import UserRouter from './router/UserRouter';
+import TicketRouter from '../router/TicketRouter';
+import UserRouter from '../router/UserRouter';
 
 // Server class
 class Server {
@@ -33,6 +34,9 @@ class Server {
         this.app.use(compression());
         this.app.use(helmet());
         this.app.use(cors());
+        this.app.get('*', (req, res) => {
+            res.sendFile(path.join(__dirname, 'build/public'));
+        });
     }
 
     private routes(): void {
