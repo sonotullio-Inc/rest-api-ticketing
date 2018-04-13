@@ -30,6 +30,7 @@ class Server {
         // config
         this.app.use(bodyParser.json()); //parsa i body di req e res in json.
         this.app.use(bodyParser.urlencoded({ extended: false })); // ???
+        this.app.use(express.static(path.join(__dirname, 'public')));
         this.app.use(logger('dev')); // inserisce un sacco di log qua e la.
         this.app.use(compression());
         this.app.use(helmet());
