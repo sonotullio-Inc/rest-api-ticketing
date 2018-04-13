@@ -1,0 +1,2 @@
+[![Build Status](https://img.shields.io/travis/sonotullio-Inc/rest-api-ticketing.svg?style=flat-square)](https://travis-ci.org/sonotullio-Inc/rest-api-ticketing)
+[![Coverage Status](https://img.shields.io/coveralls/sonotullio-Inc/rest-api-ticketing.svg?style=flat-square)](https://coveralls.io/github/sonotullio-Inc/rest-api-ticketing?branch=master)

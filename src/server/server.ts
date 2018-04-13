@@ -34,9 +34,6 @@ class Server {
         this.app.use(compression());
         this.app.use(helmet());
         this.app.use(cors());
-        this.app.get('*', (req, res) => {
-            res.sendFile(path.join(__dirname, 'build/public'));
-        });
     }
 
     private routes(): void {

@@ -1,2 +1,1 @@
-web: node build/index.js
-
+web: node dist/src/
