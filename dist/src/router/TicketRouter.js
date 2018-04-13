@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
 var Ticket_1 = require("../models/Ticket");
-var TicketRouter = /** @class */ (function () {
+var TicketRouter = (function () {
     function TicketRouter() {
         this.router = express_1.Router();
         this.routes();

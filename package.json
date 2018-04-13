@@ -10,9 +10,11 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "prod:build": "rimraf dist && tsc",
     "prod:start": "heroku local",
     "precommit": "yarn test",
-    "prepush": "yarn test && yarn prod:build"
+    "prepush": "yarn test && yarn prod:build",
+    "heroku-postbuild": "yarn prod:build"
   },
   "engines": {
     "node": "8.10.0",

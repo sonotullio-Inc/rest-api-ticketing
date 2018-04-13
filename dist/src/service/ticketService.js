@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 var commonsVariables_1 = require("../utils/commonsVariables");
-var TicketService = /** @class */ (function () {
+var TicketService = (function () {
     function TicketService(http) {
         this.http = http;
     }

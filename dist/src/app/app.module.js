@@ -15,7 +15,7 @@ var add_ticket_component_1 = require("./components/add-ticket/add-ticket.compone
 var app_component_1 = require("./components/appComponent/app.component");
 var ticketService_1 = require("../service/ticketService");
 var app_routing_module_1 = require("./app-routing.module");
-var AppModule = /** @class */ (function () {
+var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([

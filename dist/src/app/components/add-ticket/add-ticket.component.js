@@ -14,7 +14,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ticketService_1 = require("../../../service/ticketService");
-var AddTicketComponent = /** @class */ (function () {
+var AddTicketComponent = (function () {
     function AddTicketComponent(ticketService) {
         this.ticketService = ticketService;
     }

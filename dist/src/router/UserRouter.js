@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = require("express");
 var User_1 = require("../models/User");
-var UserRouter = /** @class */ (function () {
+var UserRouter = (function () {
     function UserRouter() {
         this.router = express_1.Router();
         this.routes();

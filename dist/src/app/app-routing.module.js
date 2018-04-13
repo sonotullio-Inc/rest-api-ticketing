@@ -12,7 +12,7 @@ var add_ticket_component_1 = require("./components/add-ticket/add-ticket.compone
 var routes = [
     { path: 'addTicket', component: add_ticket_component_1.AddTicketComponent }
 ];
-var AppRoutingModule = /** @class */ (function () {
+var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
